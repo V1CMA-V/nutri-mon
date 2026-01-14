@@ -1,0 +1,89 @@
+---
+import Award from '@/assets/icons/award.astro'
+import GraduationCap from '@/assets/icons/graduationCap.astro'
+import Heart from '@/assets/icons/heart.astro'
+import Users from '@/assets/icons/users.astro'
+
+const cardData = [
+  {
+    title: 'Educación',
+    description: 'Maestría en Nutrición Clínica',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Certificaciones',
+    description: 'Cedula profdesional 1234567',
+    icon: Award,
+  },
+  {
+    title: 'Experiencia',
+    description: 'Más de 10 años ayudando a pacientes',
+    icon: Users,
+  },
+  {
+    title: 'Especialidad',
+    description: 'Nutrición personalizada y planes de dieta',
+    icon: Heart,
+  },
+]
+---
+
+<article class="py-16 md:py-24 w-full max-w-380 m-auto">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1">
+        <div class="aspect-4/3 rounded-2xl overflow-hidden bg-secondary/50">
+          <img
+            src="/mon.jpg"
+            alt="Consulta nutricional"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2 space-y-6">
+        <div class="space-y-3">
+          <h2 class="text-3xl md:text-4xl font-bold text-text text-balance">
+            Conoce a tu Nutriologa
+          </h2>
+          <p class="text-lg text-text-muted leading-relaxed text-pretty">
+            Hola, soy la MNC. Mónica Martínez, nutrióloga clínica con más de 10
+            años de experiencia ayudando a personas a alcanzar sus metas de
+            salud y bienestar.
+          </p>
+        </div>
+
+        <p class="text-muted-foreground leading-relaxed text-pretty">
+          Mi enfoque se centra en crear planes nutricionales personalizados que
+          se adapten a tu estilo de vida, preferencias y objetivos. Creo
+          firmemente que la alimentación saludable debe ser sostenible,
+          deliciosa y adaptada a cada persona de manera individual.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <!-- Card -->
+          {
+            cardData.map(({ title, description, icon: Icon }) => (
+              <div class="bg-card/85 p-4 rounded-2xl shadow-sm border border-gray-300">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <span class="text-primary">
+                      <Icon />
+                    </span>
+                  </div>
+
+                  <div class="flex-1 min-w-0">
+                    <h5 class="font-semibold text-text mb-1">{title}</h5>
+                    <p class="text-sm text-text-muted leading-relaxed">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

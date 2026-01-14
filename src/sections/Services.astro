@@ -1,0 +1,78 @@
+---
+import Activity from '@/assets/icons/activity.astro'
+import Apple from '@/assets/icons/apple.astro'
+import Brain from '@/assets/icons/brain.astro'
+import Heart from '@/assets/icons/heart.astro'
+import Scale from '@/assets/icons/scale.astro'
+import Utensils from '@/assets/icons/utensils.astro'
+
+const services = [
+  {
+    icon: Scale,
+    title: 'Control de Peso',
+    description:
+      'Planes personalizados para pérdida o ganancia de peso saludable y sostenible.',
+  },
+  {
+    icon: Heart,
+    title: 'Nutrición Clínica',
+    description:
+      'Manejo nutricional de enfermedades crónicas como diabetes, hipertensión y más.',
+  },
+  {
+    icon: Activity,
+    title: 'Nutrición Deportiva',
+    description:
+      'Optimiza tu rendimiento deportivo con planes nutricionales especializados.',
+  },
+  {
+    icon: Apple,
+    title: 'Alimentación Saludable',
+    description:
+      'Aprende a crear hábitos alimenticios sostenibles para toda la vida.',
+  },
+  {
+    icon: Brain,
+    title: 'Asesoría Nutricional',
+    description:
+      'Educación y orientación personalizada sobre nutrición y bienestar.',
+  },
+  {
+    icon: Utensils,
+    title: 'Planes de Comidas',
+    description: 'Menús personalizados adaptados a tus gustos y necesidades.',
+  },
+]
+---
+
+<section class="bg-background-muted py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="text-center space-y-4 mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-balance">
+        Servicios Profesionales
+      </h2>
+      <p class="text-lg text-text-muted max-w-2xl mx-auto text-pretty">
+        Ofrezco una amplia gama de servicios nutricionales personalizados para
+        ayudarte a alcanzar tus objetivos de salud.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        services.map(({ icon: Icon, title, description }) => (
+          <div class="bg-white/85 p-6 rounded-lg shadow-sm flex flex-col items-start hover:scale-105 transition-transform duration-300">
+            <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 shrink-0">
+              <span class="text-primary">
+                <Icon />
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{title}</h3>
+            <p class="text-text-muted leading-relaxed text-pretty">
+              {description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

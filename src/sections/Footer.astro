@@ -1,0 +1,86 @@
+---
+const routes = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Sobre Mí', path: '/about' },
+  { name: 'Servicios', path: '/services' },
+  { name: 'Paquetes', path: '/packages' },
+  { name: 'Testimonios', path: '/testimonials' },
+]
+
+const socialLinks = [
+  {
+    name: 'Facebook',
+    url: 'https://facebook.com',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/nutriologa.monicamtz/',
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com',
+  },
+]
+---
+
+<footer class="w-full border-t border-text-muted/40 py-16 px-4">
+  <div class="w-full max-w-380 m-auto flex flex-col gap-6">
+    <div
+      class="w-full flex flex-col md:flex-row items-start justify-between gap-8 mb-8 border-b border-text-muted/40 pb-8"
+    >
+      <div class="max-w-xs space-y-4">
+        <h5 class="text-xl font-semibold">MNC. Mónica Martínez</h5>
+        <p class="text-balance text-sm mt-2 font-light">
+          Nutriologa certificada dedicada a transformar vidas a traves de
+          alimentacion saludable y personalizada
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h5 class="text-lg font-semibold">Enlaces Rápidos</h5>
+        <ul class="flex flex-col gap-2">
+          {
+            routes.map((route) => (
+              <li>
+                <a
+                  class="text-text-muted hover:text-primary-hover transition-colors duration-200"
+                  href={route.path}
+                >
+                  {route.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h5 class="text-lg font-semibold">Síguenos</h5>
+        <ul class="flex flex-col gap-2">
+          {
+            socialLinks.map((link) => (
+              <li>
+                <a
+                  target="_blank "
+                  referrerpolicy="no-referrer"
+                  href={link.url}
+                  class="text-text-muted hover:text-primary-hover transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p
+    class="text-center text-sm text-text-muted font-light mt-8 group transition-colors duration-200"
+  >
+    &copy; {new Date().getFullYear()}
+    <span class="group-hover:text-primary-hover">Dra. Monica Martinez</span> - Todos
+    los derechos reservados.
+  </p>
+</footer>

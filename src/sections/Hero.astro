@@ -1,0 +1,85 @@
+---
+import ArrowRight from '@/assets/icons/arrow-right.astro'
+import Check from '@/assets/icons/check.astro'
+import Sparkles from '@/assets/icons/sparkles.astro'
+---
+
+<section
+  class="w-full max-w-380 m-auto mt-15 h-dvh flex flex-col items-center justify-center gap-8"
+>
+  <div class="flex">
+    <article class="flex-1 space-y-8">
+      <span
+        class="inline-flex items-center gap-2 bg-primary/15 text-primary px-4 py-2 rounded-full text-sm font-medium"
+        ><Sparkles /> Nutriologa Certificada</span
+      >
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance"
+      >
+        Transforma tu salud con nutrición personalizada
+      </h1>
+      <p class="text-lg text-text-muted leading-relaxed text-pretty">
+        Alcanza tus objetivos de salud y bienestar con planes nutricionales
+        diseñados específicamente para ti. Te acompaño en cada paso de tu
+        transformación hacia una vida más saludable.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-8 items-center mt-8">
+        <a
+          href="#"
+          class="bg-primary text-white hover:bg-primary-hover gap-2 transition-colors duration-200 flex px-4 py-3 rounded-2xl group"
+          >Agenda tu Consulta <span
+            class="group-hover:translate-x-1 transition-transform"
+            ><ArrowRight /></span
+          ></a
+        >
+        <a
+          href="#"
+          class="bg-white text-text hover:bg-white/75 gap-2 transition-colors duration-200 flex px-4 py-3 rounded-2xl"
+          >Ver Paquetes</a
+        >
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 pt-8">
+        <div class="flex flex-col items-center justify-center">
+          <strong class="text-3xl font-bold">+500</strong>
+          <span class="text-sm text-text-muted">Pacientes</span>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <strong class="text-3xl font-bold">+10</strong>
+          <span class="text-sm text-text-muted">Años de experiencia</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+          <strong class="text-3xl font-bold">95%</strong>
+          <span class="text-sm text-text-muted">Satisfacción</span>
+        </div>
+      </div>
+    </article>
+    <div class="flex-1 relative">
+      <div class="aspect-square rounded-2xl overflow-hidden bg-secondary/50">
+        <img
+          src="/mon.jpg"
+          alt="Foto de la nutrióloga Mónica Martínez"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div
+        class="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-lg border border-secondary/20 max-w-xs"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="h-12 w-12 rounded-full bg-primary/50 flex items-center justify-center text-primary text-xl font-bold"
+          >
+            <Check />
+          </div>
+          <div>
+            <h3 class="font-semibold text-text-muted">
+              Resultados Garantizados
+            </h3>
+            <p class="text-sm text-text-muted">Planes personalizados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+const routes = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Sobre Mí', path: '/about' },
+  { name: 'Servicios', path: '/services' },
+  { name: 'Paquetes', path: '/packages' },
+  { name: 'Testimonios', path: '/testimonials' },
+]
+
+const { pathname } = Astro.url
+
+function isActive(path: string) {
+  return path === pathname
+}
+
+console.log('Pathname: ', pathname)
+---
+
+<header
+  id="navbar"
+  class="w-full fixed top-0 left-0 z-50 h-20 md:h-24 select-none md:px-24 sm:overflow-hidden rounded-sm"
+>
+  <div
+    class="w-full max-w-380 m-auto flex items-center justify-between px-4 py-6"
+  >
+    <h3 class="text-xl font-semibold">
+      MNC. Mónica Martínez - Nutrición y Bienestar
+    </h3>
+
+    <nav class="flex items-center gap-6">
+      <ul class="flex items-center justify-center gap-6">
+        {
+          routes.map((route) => (
+            <li
+              class={` ${isActive(route.path) ? 'text-primary-hover font-semibold' : 'text-text-muted hover:text-primary transition-colors'}`}
+            >
+              <a href={route.path}>{route.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/schedule"
+        class="font-semibold bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-hover transition-colors"
+        >Agendar Cita</a
+      >
+    </nav>
+  </div>
+</header>
