@@ -1,0 +1,69 @@
+---
+import Award from '@/assets/icons/award.astro'
+import BookOpen from '@/assets/icons/book-open.astro'
+import GraduationCap from '@/assets/icons/graduationCap.astro'
+import Star from '@/assets/icons/star.astro'
+import { certificaciones, educacion } from '@data'
+---
+
+<section class="py-16 bg-background-muted">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        {/* Educación */}
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-primary text-2xl"
+              ><GraduationCap size={45} /></span
+            >
+            <h2 class="text-3xl font-bold text-text">Educación</h2>
+          </div>
+          <div class="space-y-6">
+            {
+              educacion.map((edu) => (
+                <div class="p-5 hover:shadow-lg transition-shadow duration-200 bg-card rounded-2xl border border-gray-300">
+                  <div class="flex items-center gap-4">
+                    <div class="bg-primary/50 text-primary p-2 rounded-full">
+                      <BookOpen />
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-text mb-1">{edu.titulo}</h3>
+                      <p class="text-sm text-text-muted mb-1">
+                        {edu.institucion}
+                      </p>
+                      <p class="text-xs text-text-muted">{edu.año}</p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        {/* Certificaciones */}
+        <div>
+          <div class="flex items-center text-primary gap-3 mb-6">
+            <Award size={45} />
+            <h2 class="text-3xl font-bold text-text">Certificaciones</h2>
+          </div>
+          <div class="space-y-3">
+            {
+              certificaciones.map((cert) => (
+                <div class="p-4 hover:shadow-lg transition-shadow duration-200 bg-card rounded-2xl border border-gray-300">
+                  <div class="flex items-center gap-3">
+                    <div class="bg-accent/20 p-2 rounded-full">
+                      <span class="text-primary">
+                        <Star />
+                      </span>
+                    </div>
+                    <p class="text-text font-medium">{cert}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

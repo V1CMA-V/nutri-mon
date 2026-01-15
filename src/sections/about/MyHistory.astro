@@ -1,0 +1,77 @@
+---
+import Activity from '@/assets/icons/activity.astro'
+import Brain from '@/assets/icons/brain.astro'
+import Heart from '@/assets/icons/heart.astro'
+import Star from '@/assets/icons/star.astro'
+import { valores } from '@data'
+
+// Mapeo de nombres de iconos a componentes
+const iconMap: Record<string, any> = {
+  Heart,
+  Target: Activity, // Usando Activity como alternativa a Target
+  Lightbulb: Brain, // Usando Brain como alternativa a Lightbulb
+  Star,
+}
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-3xl font-bold text-text mb-6">Mi Historia</h2>
+          <div class="space-y-4 text-text-muted">
+            <p>
+              Mi pasión por la nutrición comenzó hace más de 12 años cuando
+              descubrí el poder transformador de una alimentación adecuada.
+              Desde entonces, he dedicado mi vida profesional a ayudar a las
+              personas a alcanzar sus metas de salud y bienestar.
+            </p>
+            <p>
+              A lo largo de mi carrera, he tenido el privilegio de trabajar con
+              más de 500 pacientes, cada uno con necesidades y objetivos únicos.
+              Esta experiencia me ha enseñado que no existe una solución única
+              para todos, y que el éxito radica en crear planes personalizados
+              que se adapten a tu estilo de vida.
+            </p>
+            <p>
+              Me especializo en nutrición clínica, deportiva y funcional,
+              combinando la ciencia más actualizada con un enfoque humano y
+              comprensivo. Creo firmemente que una alimentación saludable no
+              debe ser un sacrificio, sino un camino placentero hacia una mejor
+              versión de ti mismo.
+            </p>
+          </div>
+        </div>
+        <div class="relative h-96 rounded-lg overflow-hidden shadow-xl">
+          <img src="/mon.jpg" alt="MNC. Mónica Martínez" class="object-cover" />
+        </div>
+      </div>
+
+      {/* Valores */}
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-text mb-8 text-center">
+          Mis Valores
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {
+            valores.map((valor) => {
+              const Icon = iconMap[valor.icon]
+              return (
+                <div class="p-6 bg-card/80 rounded-lg shadow-md text-center hover:scale-105 transition-transform border border-transparent hover:border-primary duration-300">
+                  <span class="text-primary mb-4 flex justify-center">
+                    <Icon size={40} />
+                  </span>
+                  <h3 class="text-xl font-semibold text-text mb-2">
+                    {valor.titulo}
+                  </h3>
+                  <p class="text-text-muted">{valor.descripcion}</p>
+                </div>
+              )
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

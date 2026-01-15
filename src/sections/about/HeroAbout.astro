@@ -1,0 +1,32 @@
+---
+import { logros } from '@data'
+---
+
+<section
+  class="pt-24 pb-12 bg-linear-to-br from-primary/5 via-background to-accent/5"
+>
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-text mb-6 text-balance">
+        Conoce a la MNC. Mónica Martínez
+      </h1>
+      <p class="text-lg text-text-muted text-pretty">
+        Nutrióloga clínica dedicada a transformar vidas a través de la
+        alimentación consciente y personalizada
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      {
+        logros.map((logro, index) => (
+          <div class="p-6 text-center bg-card rounded-xl hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold text-primary mb-2">
+              {logro.numero}
+            </div>
+            <div class="text-sm text-text-muted">{logro.texto}</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import { galeriaFotos } from '@data'
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-text mb-4 text-center">
+        Mi Espacio de Trabajo
+      </h2>
+      <p class="text-center text-text-muted mb-12 max-w-2xl mx-auto">
+        Un vistazo a mi consultorio y el trabajo que realizo día a día para
+        ayudarte a alcanzar tus objetivos de salud
+      </p>
+      <div class="grid md:grid-cols-3 gap-6 mt-16">
+        {
+          galeriaFotos.map((foto) => (
+            <div class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all">
+              <img
+                src={foto.url || '/placeholder.svg'}
+                alt={foto.alt}
+                class="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <p class="text-white text-sm font-medium">{foto.alt}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

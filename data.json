@@ -1,10 +1,10 @@
 {
   "routes": [
     { "name": "Inicio", "path": "/" },
-    { "name": "Sobre Mí", "path": "/about" },
-    { "name": "Servicios", "path": "/services" },
-    { "name": "Paquetes", "path": "/packages" },
-    { "name": "Testimonios", "path": "/testimonials" }
+    { "name": "Sobre Mí", "path": "/sobre-mi" },
+    { "name": "Servicios", "path": "/servicios" },
+    { "name": "Paquetes", "path": "/paquetes" },
+    { "name": "Testimonios", "path": "/testimonios" }
   ],
 
   "socialLinks": [
@@ -66,6 +66,95 @@
         "Descuento del 15%"
       ],
       "highlighted": false
+    }
+  ],
+
+  "educacion": [
+    {
+      "titulo": "Licenciatura en Nutrición",
+      "institucion": "Universidad Nacional Autónoma de México",
+      "año": "2010-2014"
+    },
+    {
+      "titulo": "Maestría en Nutrición Clínica",
+      "institucion": "Instituto Politécnico Nacional",
+      "año": "2015-2017"
+    },
+    {
+      "titulo": "Certificación en Nutrición Deportiva",
+      "institucion": "International Sports Sciences Association",
+      "año": "2018"
+    },
+    {
+      "titulo": "Diplomado en Nutrición Funcional",
+      "institucion": "Instituto de Nutrición Funcional",
+      "año": "2020"
+    }
+  ],
+
+  "certificaciones": [
+    "Certified Nutrition Specialist (CNS)",
+    "Educadora en Diabetes Certificada",
+    "Especialista en Nutrición Pediátrica",
+    "Certificación en Mindful Eating",
+    "Nutrición Oncológica Avanzada",
+    "Coaching Nutricional Certificado"
+  ],
+
+  "logros": [
+    { "numero": "500+", "texto": "Pacientes Transformados" },
+    { "numero": "12+", "texto": "Años de Experiencia" },
+    { "numero": "95%", "texto": "Tasa de Éxito" },
+    { "numero": "10+", "texto": "Certificaciones" }
+  ],
+
+  "valores": [
+    {
+      "icon": "Heart",
+      "titulo": "Empatía",
+      "descripcion": "Entiendo que cada persona tiene una historia única y merece un trato personalizado y comprensivo."
+    },
+    {
+      "icon": "Target",
+      "titulo": "Resultados",
+      "descripcion": "Me enfoco en estrategias probadas que generan cambios reales y sostenibles en tu salud."
+    },
+    {
+      "icon": "Lightbulb",
+      "titulo": "Innovación",
+      "descripcion": "Me mantengo actualizada con las últimas investigaciones para ofrecerte los mejores tratamientos."
+    },
+    {
+      "icon": "Star",
+      "titulo": "Excelencia",
+      "descripcion": "Me comprometo a brindarte el más alto nivel de servicio profesional en cada consulta."
+    }
+  ],
+
+  "galeriaFotos": [
+    {
+      "url": "test/consultorio-nutricion-moderno.jpg",
+      "alt": "Consultorio moderno y acogedor"
+    },
+    {
+      "url": "test/nutriologa-con-paciente-consulta.jpg",
+      "alt": "Consulta personalizada con paciente"
+    },
+    {
+      "url": "test/alimentos-saludables-coloridos.jpg",
+      "alt": "Alimentos saludables y nutritivos"
+    },
+    {
+      "url": "test/plan-nutricional-personalizado.jpg",
+      "alt": "Elaboración de planes personalizados"
+    },
+    {
+      "url": "test/clase-nutricion-grupo.jpg",
+      "alt": "Talleres y conferencias de nutrición"
+    },
+    {
+      "url": "test/medicion-composicion-corporal.jpg",
+      "alt": "Análisis de composición corporal"
     }
   ]
 }
