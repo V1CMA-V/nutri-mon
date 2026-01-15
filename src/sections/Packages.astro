@@ -1,53 +1,8 @@
 ---
+import { packages } from '@data'
+
 import Check from '@/assets/icons/check.astro'
 import Star from '@/assets/icons/star.astro'
-
-const packages = [
-  {
-    name: 'Consulta Individual',
-    price: '$800',
-    period: 'por sesión',
-    description: 'Ideal para comenzar tu transformación',
-    features: [
-      'Evaluación nutricional completa',
-      'Plan alimenticio personalizado',
-      'Recetario digital incluido',
-      'Seguimiento por WhatsApp 7 días',
-    ],
-    highlighted: false,
-  },
-  {
-    name: 'Paquete Mensual',
-    price: '$2,500',
-    period: 'al mes',
-    description: 'El más popular para resultados sostenibles',
-    features: [
-      'Todo lo del paquete individual',
-      '4 consultas de seguimiento',
-      'Ajustes ilimitados al plan',
-      'Seguimiento por WhatsApp 30 días',
-      'Recetas semanales personalizadas',
-      'Análisis de composición corporal',
-    ],
-    highlighted: true,
-  },
-  {
-    name: 'Paquete Trimestral',
-    price: '$6,500',
-    period: '3 meses',
-    description: 'Para transformaciones duraderas',
-    features: [
-      'Todo lo del paquete mensual',
-      '12 consultas de seguimiento',
-      'Plan de mantenimiento',
-      'Seguimiento por WhatsApp 90 días',
-      'Asesoría en compras de supermercado',
-      'Sesión de cocina saludable',
-      'Descuento del 15%',
-    ],
-    highlighted: false,
-  },
-]
 ---
 
 <section id="packages" class="py-16 md:py-24">
