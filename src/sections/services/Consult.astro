@@ -1,0 +1,30 @@
+---
+import { procesoconsulta } from '@data'
+---
+
+<section class="py-16 bg-background-muted/50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-text mb-4 text-center">
+        ¿Cómo Funciona una Consulta?
+      </h2>
+      <p class="text-center text-text-muted mb-12 max-w-2xl mx-auto">
+        Un proceso estructurado y probado para garantizar los mejores resultados
+      </p>
+      <div class="grid md:grid-cols-4 gap-6 mt-16">
+        {
+          procesoconsulta.map((item) => (
+            // card
+            <div class="p-6 bg-card/85 rounded-xl text-center hover:-translate-y-1.5 transition-transform border border-transparent hover:border-primary duration-300">
+              <div class="w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                {item.paso}
+              </div>
+              <h3 class="font-semibold text-text mb-2">{item.titulo}</h3>
+              <p class="text-sm text-text-muted">{item.descripcion}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

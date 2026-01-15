@@ -156,5 +156,168 @@
       "url": "test/medicion-composicion-corporal.jpg",
       "alt": "Análisis de composición corporal"
     }
+  ],
+
+  "serviciosDetallados": [
+    {
+      "icon": "Apple",
+      "titulo": "Nutrición Clínica",
+      "descripcion": "Tratamiento nutricional personalizado para condiciones de salud",
+      "imagen": "test/nutricion-clinica-consulta.jpg",
+      "beneficios": [
+        "Evaluación médico-nutricional completa",
+        "Plan alimenticio personalizado",
+        "Seguimiento mensual incluido",
+        "Ajustes según tu progreso",
+        "Material educativo personalizado"
+      ],
+      "condiciones": [
+        "Diabetes tipo 1 y 2",
+        "Hipertensión arterial",
+        "Colesterol y triglicéridos elevados",
+        "Síndrome metabólico",
+        "Problemas digestivos",
+        "Enfermedades tiroideas"
+      ],
+      "duracion": "60 minutos",
+      "incluye": "Análisis de composición corporal + Plan nutricional digital"
+    },
+    {
+      "icon": "TrendingUpDown",
+      "titulo": "Control de Peso",
+      "descripcion": "Programa integral para alcanzar y mantener tu peso ideal",
+      "imagen": "test/perdida-peso-saludable.jpg",
+      "beneficios": [
+        "Estrategia personalizada de pérdida de peso",
+        "Educación en hábitos alimenticios",
+        "Apoyo psicológico incluido",
+        "Recetas adaptadas a tus gustos",
+        "Seguimiento semanal o quincenal"
+      ],
+      "caracteristicas": [
+        "Pérdida de peso sostenible (0.5-1kg/semana)",
+        "Sin dietas restrictivas",
+        "Enfoque en cambio de hábitos",
+        "Prevención del efecto rebote",
+        "Mejora de composición corporal"
+      ],
+      "duracion": "45 minutos",
+      "incluye": "Mediciones corporales + Guía de alimentos + App de seguimiento"
+    },
+    {
+      "icon": "Baby",
+      "titulo": "Nutrición Pediátrica",
+      "descripcion": "Alimentación saludable para el desarrollo óptimo de tus hijos",
+      "imagen": "test/nutricion-ninos-saludable.jpg",
+      "beneficios": [
+        "Evaluación de crecimiento y desarrollo",
+        "Planes para comedores selectivos",
+        "Orientación para padres",
+        "Recetas familiares saludables",
+        "Prevención de obesidad infantil"
+      ],
+      "especialidades": [
+        "Alimentación complementaria (6-12 meses)",
+        "Nutrición en preescolares y escolares",
+        "Adolescentes y pubertad",
+        "Alergias e intolerancias alimentarias",
+        "Trastornos alimentarios infantiles",
+        "Bajo peso y desnutrición"
+      ],
+      "duracion": "50 minutos",
+      "incluye": "Gráficas de crecimiento + Material educativo para niños"
+    },
+    {
+      "icon": "Dumbbell",
+      "titulo": "Nutrición Deportiva",
+      "descripcion": "Optimiza tu rendimiento físico con la alimentación adecuada",
+      "imagen": "test/nutricion-deportiva-atleta.jpg",
+      "beneficios": [
+        "Plan nutricional según tu deporte",
+        "Timing de nutrientes optimizado",
+        "Suplementación basada en evidencia",
+        "Estrategias de hidratación",
+        "Planes para competencias"
+      ],
+      "paraquien": [
+        "Atletas de alto rendimiento",
+        "Deportistas recreativos",
+        "Personas que entrenan regularmente",
+        "Preparación para maratones/competencias",
+        "Ganancia de masa muscular",
+        "Mejora de composición corporal deportiva"
+      ],
+      "duracion": "60 minutos",
+      "incluye": "Análisis de requerimientos + Protocolo de suplementación"
+    },
+    {
+      "icon": "Heart",
+      "titulo": "Nutrición Funcional",
+      "descripcion": "Abordaje integral que busca la causa raíz de tus problemas",
+      "imagen": "test/alimentos-funcionales-organicos.jpg",
+      "beneficios": [
+        "Enfoque personalizado bioindividual",
+        "Identificación de intolerancias",
+        "Reducción de inflamación",
+        "Mejora de energía y vitalidad",
+        "Optimización de microbiota intestinal"
+      ],
+      "ayudacon": [
+        "Fatiga crónica y baja energía",
+        "Problemas digestivos recurrentes",
+        "Inflamación crónica",
+        "Desequilibrios hormonales",
+        "Problemas de piel",
+        "Salud intestinal"
+      ],
+      "duracion": "75 minutos",
+      "incluye": "Análisis detallado de síntomas + Plan de alimentación antiinflamatoria"
+    },
+    {
+      "icon": "Users",
+      "titulo": "Nutrición Familiar",
+      "descripcion": "Transforma la alimentación de toda tu familia",
+      "imagen": "test/familia-comiendo-saludable.jpg",
+      "beneficios": [
+        "Consulta grupal (hasta 4 personas)",
+        "Menú semanal familiar",
+        "Lista de compras organizada",
+        "Recetas fáciles y saludables",
+        "Educación nutricional para todos"
+      ],
+      "incluye_servicio": [
+        "Evaluación de todos los miembros",
+        "Plan alimenticio adaptado a toda la familia",
+        "Recetas para batch cooking",
+        "Tips para meal prep",
+        "Estrategias para niños selectivos",
+        "Presupuesto optimizado"
+      ],
+      "duracion": "90 minutos",
+      "incluye": "Recetario familiar + Guía de meal prep + Grupo de WhatsApp"
+    }
+  ],
+
+  "procesoconsulta": [
+    {
+      "paso": "1",
+      "titulo": "Evaluación Inicial",
+      "descripcion": "Realizamos un historial médico completo, analizamos tus hábitos actuales y establecemos objetivos claros."
+    },
+    {
+      "paso": "2",
+      "titulo": "Análisis Corporal",
+      "descripcion": "Medimos tu composición corporal con tecnología avanzada para crear una línea base precisa."
+    },
+    {
+      "paso": "3",
+      "titulo": "Plan Personalizado",
+      "descripcion": "Diseño un plan nutricional adaptado a tus necesidades, gustos y estilo de vida."
+    },
+    {
+      "paso": "4",
+      "titulo": "Seguimiento Continuo",
+      "descripcion": "Monitoreamos tu progreso y ajustamos el plan según sea necesario para garantizar resultados."
+    }
   ]
 }

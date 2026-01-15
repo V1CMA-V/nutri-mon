@@ -1,0 +1,141 @@
+---
+import Apple from '@/assets/icons/apple.astro'
+import ArrowRight from '@/assets/icons/arrow-right.astro'
+import Baby from '@/assets/icons/baby.astro'
+import BadgeCheck from '@/assets/icons/badge-check.astro'
+import Clock from '@/assets/icons/clock.astro'
+import Dumbbell from '@/assets/icons/dumbbell.astro'
+import Heart from '@/assets/icons/heart.astro'
+import Target from '@/assets/icons/target.astro'
+import TrendingUpDown from '@/assets/icons/trending-up-down.astro'
+import Users from '@/assets/icons/users.astro'
+import { serviciosDetallados } from '@data'
+
+// Mapeo de nombres de iconos a componentes
+const iconMap: Record<string, any> = {
+  Apple,
+  TrendingUpDown, // Usando Activity como alternativa a TrendingUpDown
+  Baby, // Usando Users como alternativa a Baby
+  Dumbbell, // Usando Activity como alternativa a Dumbbell
+  Heart,
+  Users,
+}
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto space-y-16">
+      {
+        serviciosDetallados.map((servicio, index) => {
+          const Icon = iconMap[servicio.icon]
+          const isEven = index % 2 === 0
+          return (
+            <div
+              class={`grid md:grid-cols-2 gap-8 items-start ${isEven ? '' : 'md:grid-flow-dense'}`}
+            >
+              <div class={isEven ? '' : 'md:col-start-2'}>
+                <div class="relative h-full rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={servicio.imagen || '/placeholder.svg'}
+                    alt={servicio.titulo}
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class={isEven ? '' : 'md:col-start-1 md:row-start-1'}>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="bg-primary/10 p-3 rounded-full">
+                    <Icon size={32} class="text-primary" />
+                  </div>
+                  <h2 class="text-2xl md:text-3xl font-bold text-text">
+                    {servicio.titulo}
+                  </h2>
+                </div>
+
+                <p class="text-text-muted mb-6 text-lg">
+                  {servicio.descripcion}
+                </p>
+
+                <div class="space-y-6">
+                  {servicio.beneficios && (
+                    <div>
+                      <h3 class="font-semibold text-text mb-3 flex items-center gap-2">
+                        <BadgeCheck size={25} class=" text-primary" />
+                        Beneficios
+                      </h3>
+                      <ul class="space-y-2">
+                        {servicio.beneficios.map((beneficio) => (
+                          <li class="flex items-start gap-2 text-text-muted">
+                            <ArrowRight
+                              size={16}
+                              class="text-accent mt-1 shrink-0"
+                            />
+                            <span>{beneficio}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {(servicio.condiciones ||
+                    servicio.caracteristicas ||
+                    servicio.especialidades ||
+                    servicio.paraquien ||
+                    servicio.ayudacon ||
+                    servicio.incluye_servicio) && (
+                    <div>
+                      <h3 class="font-semibold text-text mb-3 flex items-center gap-2">
+                        <Target size={25} class="text-accent" />
+                        {servicio.condiciones && 'Tratamos'}
+                        {servicio.caracteristicas && 'Características'}
+                        {servicio.especialidades && 'Especialidades'}
+                        {servicio.paraquien && '¿Para quién?'}
+                        {servicio.ayudacon && 'Te ayudo con'}
+                        {servicio.incluye_servicio && 'Incluye'}
+                      </h3>
+                      <ul class="grid md:grid-cols-2 gap-2">
+                        {(
+                          servicio.condiciones ||
+                          servicio.caracteristicas ||
+                          servicio.especialidades ||
+                          servicio.paraquien ||
+                          servicio.ayudacon ||
+                          servicio.incluye_servicio ||
+                          []
+                        ).map((item) => (
+                          <li class="flex items-start gap-2 text-sm text-text-muted">
+                            <BadgeCheck
+                              size={20}
+                              class="text-primary mt-0.5 shrink-0"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* card */}
+                  <div class="p-4 bg-background-muted/50 rounded-lg border border-background-muted shadow-sm hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center justify-between flex-wrap gap-4">
+                      <div class="flex items-center gap-2">
+                        <Clock size={20} class="text-primary" />
+                        <span class="text-sm font-medium text-text">
+                          Duración: {servicio.duracion}
+                        </span>
+                      </div>
+                      <div class="text-sm text-text-muted">
+                        <strong>Incluye:</strong> {servicio.incluye}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      }
+    </div>
+  </div>
+</section>

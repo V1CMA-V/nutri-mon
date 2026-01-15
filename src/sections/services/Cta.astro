@@ -1,0 +1,35 @@
+---
+import Activity from '@/assets/icons/activity.astro'
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Card -->
+      <div
+        class="rounded-2xl p-8 md:p-12 bg-linear-to-br from-primary/10 to-accent/10 text-center shadow-xl border border-transparent hover:border-primary transition-border duration-300"
+      >
+        <Activity size={32} class="text-primary mx-auto mb-6" />
+        <h2 class="text-3xl font-bold text-text mb-4">
+          ¿No estás segura de qué servicio necesitas?
+        </h2>
+        <p class="text-lg text-text-muted mb-8">
+          Agenda una consulta de valoración gratuita de 15 minutos y te ayudaré
+          a encontrar el mejor camino para ti
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center mt-8">
+          <a
+            href="/#contacto"
+            class="px-3 py-2 bg-primary text-white rounded-xl hover:bg-primary-hover transition-colors duration-300"
+            >Agendar Valoración Gratuita</a
+          >
+          <a
+            href="/paquetes"
+            class="px-3 py-2 bg-card text-text rounded-xl hover:text-white hover:bg-accent/85 transition-colors duration-300"
+            >Ver Paquetes con Descuento</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
