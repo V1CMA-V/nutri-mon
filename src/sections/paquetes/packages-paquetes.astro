@@ -1,0 +1,75 @@
+---
+import { packages } from '@data'
+
+import Check from '@/assets/icons/check.astro'
+import Star from '@/assets/icons/star.astro'
+---
+
+<section id="packages" class="py-16 md:py-24">
+  <div class="grid lg:grid-cols-3 gap-6 max-w-380 mx-auto">
+    {
+      packages.map(
+        ({ name, price, period, description, features, highlighted }) => (
+          // Card
+          <div
+            class={`border rounded-2xl bg-card/85 p-6 flex flex-col shadow-sm ${highlighted ? 'border-primary  scale-105 shadow-xl ring-primary' : 'border-gray-300 '}`}
+          >
+            {highlighted && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-hover px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                <Star />
+                Más Popular
+              </div>
+            )}
+
+            <div class="space-y-6 grow">
+              <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-text">{name}</h3>
+                <p class="text-sm text-text-muted">{description}</p>
+              </div>
+
+              <div class="flex items-baseline gap-1">
+                <span class="text-4xl font-bold text-text">{price}</span>
+                <span class="text-sm text-text-muted">{period}</span>
+              </div>
+
+              <ul class="space-y-3">
+                {features.map((feature) => (
+                  <li class="flex items-start gap-3">
+                    <div class="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1 p-2">
+                      <span class="text-primary text-lg">
+                        <Check />
+                      </span>
+                    </div>
+                    <span class="text-sm text-text-muted">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href="#contact"
+              class={`block w-full rounded-lg py-3 px-6 text-center font-semibold transition-all duration-200 mt-6 ${
+                highlighted
+                  ? 'bg-primary text-white hover:bg-primary/90 shadow-md hover:shadow-lg'
+                  : 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white'
+              }`}
+            >
+              Agendar Consulta
+            </a>
+          </div>
+        )
+      )
+    }
+  </div>
+
+  <div class="mt-12 text-center">
+    <p class="text-sm text-muted-foreground">
+      ¿Necesitas un plan personalizado?{' '}
+      <a href="#contact" class="text-primary hover:underline font-medium">
+        Contáctame
+      </a>
+    </p>
+  </div>
+</section>
+
+s

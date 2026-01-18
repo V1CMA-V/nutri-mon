@@ -1,0 +1,25 @@
+---
+import { faqs } from '@data'
+---
+
+{/* FAQs */}
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-text mb-12 text-center">
+        Preguntas Frecuentes
+      </h2>
+      <div class="space-y-6">
+        {
+          faqs.map((faq) => (
+            // Card
+            <div class="p-6 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h3 class="font-semibold text-text mb-2">{faq.pregunta}</h3>
+              <p class="text-text-muted">{faq.respuesta}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

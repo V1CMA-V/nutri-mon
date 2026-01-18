@@ -1,0 +1,24 @@
+---
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout
+  title="Página No Encontrada - 404"
+  description="Lo sentimos, la página que buscas no existe. Regresa a la página principal o explora nuestro sitio."
+>
+  <section class="w-full h-screen flex items-center justify-center">
+    <div class="text-center flex items-center flex-col gap-6 px-4">
+      <h1 class="text-3xl md:text-4xl lg:w-5xl font-bold">
+        Nutri-Mon Pagina no Encontrada
+      </h1>
+      <p class="text-text-muted text-xl md:text-2xl lg:w-3xl mx-auto">
+        Lo sentimos, la página que buscas no existe.
+      </p>
+      <a
+        href="/"
+        class="px-6 py-3 bg-primary hover:bg-primary-hover transition-colors duration-300 text-2xl rounded-full text-white"
+        >Regresar a la página principal</a
+      >
+    </div>
+  </section>
+</Layout>

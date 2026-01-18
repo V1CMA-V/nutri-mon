@@ -1,0 +1,83 @@
+---
+import Quote from '@/assets/icons/quote.astro'
+import Star from '@/assets/icons/star.astro'
+import TrendingDown from '@/assets/icons/trending-down.astro'
+import { testimoniosDetallados } from '@data'
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto space-y-8">
+      {
+        testimoniosDetallados.map((testimonio) => (
+          // Card
+          <div class="p-8 bg-card rounded-2xl  hover:shadow-xl transition-shadow duration-300">
+            <div class="grid md:grid-cols-[150px_1fr] gap-6">
+              {/* Imagen y Rating */}
+              <div class="flex flex-col items-center">
+                <div class="relative w-32 h-32 rounded-full overflow-hidden mb-4">
+                  <img
+                    src={testimonio.imagen || '/placeholder.svg'}
+                    alt={testimonio.nombre}
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex gap-1 mb-2">
+                  {Array.from({ length: testimonio.rating }).map((_, i) => (
+                    <Star class="text-accent fill-current" />
+                  ))}
+                </div>
+                <div class="text-center">
+                  <div class="font-semibold text-text">{testimonio.nombre}</div>
+                  <div class="text-sm text-text-muted">
+                    {testimonio.edad} años
+                  </div>
+                </div>
+              </div>
+
+              {/* Contenido */}
+              <div>
+                <div class="flex flex-wrap gap-4 mb-4">
+                  <div class="bg-primary/10 px-3 py-1 rounded-full text-sm font-medium text-primary">
+                    {testimonio.objetivo}
+                  </div>
+                  <div class="bg-accent/10 px-3 py-1 rounded-full text-sm font-medium text-accent">
+                    {testimonio.paquete}
+                  </div>
+                  <div class="text-sm text-text-muted">{testimonio.fecha}</div>
+                </div>
+
+                <h3 class="text-xl font-bold text-text mb-3 flex items-center gap-2">
+                  <TrendingDown class="text-accent" />
+                  {testimonio.resultado}
+                </h3>
+
+                <div class="relative">
+                  <Quote class="absolute -top-2 -left-2 h-8 w-8 text-primary/50" />
+                  <p class="text-text-muted leading-relaxed pl-6">
+                    {testimonio.testimonio}
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-border">
+                  <div>
+                    <div class="text-sm text-text-muted mb-1">Antes</div>
+                    <div class="font-semibold text-text">
+                      {testimonio.antes}
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-sm text-text-muted mb-1">Después</div>
+                    <div class="font-semibold text-accent">
+                      {testimonio.despues}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

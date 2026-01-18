@@ -1,0 +1,38 @@
+---
+import { testimoniosdestacados } from '@data'
+---
+
+{/* Testimonios Destacados */}
+<section class="py-16 bg-linear-to-br from-primary/5 to-accent/5">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-foreground mb-12 text-center">
+        Historias de Éxito
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        {
+          testimoniosdestacados.map((testimonio) => (
+            // card
+            <div class="p-6 bg-card rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div class="flex items-start gap-4 mb-4">
+                <img
+                  src={testimonio.imagen || '/placeholder.svg'}
+                  alt={testimonio.nombre}
+                  class="w-16 h-16 rounded-full object-cover"
+                />
+                <div>
+                  <h4 class="font-semibold text-text">{testimonio.nombre}</h4>
+                  <p class="text-sm text-accent font-medium">
+                    {testimonio.resultado}
+                  </p>
+                  <p class="text-xs text-text-muted">{testimonio.paquete}</p>
+                </div>
+              </div>
+              <p class="text-text-muted italic">"{testimonio.testimonio}"</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -319,5 +319,240 @@
       "titulo": "Seguimiento Continuo",
       "descripcion": "Monitoreamos tu progreso y ajustamos el plan según sea necesario para garantizar resultados."
     }
+  ],
+
+  "serviciosextras": [
+    {
+      "titulo": "Consulta Express",
+      "descripcion": "Seguimiento rápido de 15 minutos",
+      "precio": "$300",
+      "icon": "MessageCircle"
+    },
+    {
+      "titulo": "Análisis de Laboratorio",
+      "descripcion": "Interpretación de estudios clínicos",
+      "precio": "$500",
+      "icon": "FileText"
+    },
+    {
+      "titulo": "Consulta Familiar",
+      "descripcion": "Sesión grupal hasta 4 personas",
+      "precio": "$1,800",
+      "icon": "Award"
+    },
+    {
+      "titulo": "Recetario Personalizado",
+      "descripcion": "50 recetas adaptadas a ti",
+      "precio": "$400",
+      "icon": "Gift"
+    }
+  ],
+  "beneficiosadicionales": [
+    {
+      "icon": "TrendingUp",
+      "titulo": "Resultados Garantizados",
+      "descripcion": "Si sigues el plan al 100%, garantizo que verás resultados o extiendo tu seguimiento sin costo."
+    },
+    {
+      "icon": "Calendar",
+      "titulo": "Flexibilidad de Horarios",
+      "descripcion": "Consultas presenciales y en línea. Agenda en el horario que mejor te convenga."
+    },
+    {
+      "icon": "MessageCircle",
+      "titulo": "Soporte Continuo",
+      "descripcion": "No estás sola. Resuelvo tus dudas entre consultas por WhatsApp."
+    },
+    {
+      "icon": "Gift",
+      "titulo": "Bonos Exclusivos",
+      "descripcion": "Todos los paquetes incluyen material digital de regalo y descuentos especiales."
+    }
+  ],
+
+  "testimoniosdestacados": [
+    {
+      "nombre": "Laura Martínez",
+      "resultado": "Perdió 15kg en 4 meses",
+      "testimonio": "El Paquete Premium fue la mejor inversión. No solo bajé de peso, aprendí a comer bien para siempre.",
+      "paquete": "Paquete Premium",
+      "imagen": "test/mujer-feliz-retrato.jpg"
+    },
+    {
+      "nombre": "Carlos Ruiz",
+      "resultado": "Controló su diabetes",
+      "testimonio": "En 6 meses mi glucosa está perfecta. El seguimiento continuo fue clave para mi éxito.",
+      "paquete": "Paquete Elite",
+      "imagen": "test/hombre-sonriente-retrato.jpg"
+    }
+  ],
+  "faqs": [
+    {
+      "pregunta": "¿Puedo cambiar de paquete después?",
+      "respuesta": "Sí, puedes actualizar tu paquete en cualquier momento. Si decides cambiar a uno superior, el valor de las consultas ya tomadas se descuenta del nuevo paquete."
+    },
+    {
+      "pregunta": "¿Qué pasa si no puedo asistir a una consulta?",
+      "respuesta": "Puedes reagendar con 24 horas de anticipación sin ningún cargo. Las consultas tienen validez durante la vigencia de tu paquete."
+    },
+    {
+      "pregunta": "¿Los paquetes incluyen consultas en línea?",
+      "respuesta": "Sí, todas las consultas pueden ser presenciales o en línea según tu preferencia y disponibilidad."
+    },
+    {
+      "pregunta": "¿Ofrecen planes de pago?",
+      "respuesta": "Sí, acepto pagos con tarjeta de crédito en meses sin intereses. Contáctame para conocer las opciones disponibles."
+    }
+  ],
+
+  "testimoniosDetallados": [
+    {
+      "nombre": "Ana Patricia Rodríguez",
+      "edad": 35,
+      "objetivo": "Pérdida de peso",
+      "resultado": "Perdió 18kg en 5 meses",
+      "testimonio": "Llegué con la Dra. María después de años de dietas fallidas. Lo que más me impactó fue su enfoque humano y realista. No me puso en una dieta restrictiva, sino que me enseñó a comer de forma balanceada. En 5 meses no solo perdí 18kg, sino que aprendí a mantener mi peso de forma natural. Mi vida cambió completamente.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Premium",
+      "fecha": "Marzo 2024",
+      "antes": "82kg",
+      "despues": "64kg"
+    },
+    {
+      "nombre": "Roberto Sánchez",
+      "edad": 45,
+      "objetivo": "Control de diabetes",
+      "resultado": "HbA1c de 9.2% a 6.1%",
+      "testimonio": "Mi diabetes estaba fuera de control y mi médico amenazaba con aumentar mi medicación. La Dra. María diseñó un plan nutricional específico para mi condición. En 4 meses, mi hemoglobina glucosilada bajó de 9.2% a 6.1%. Mi doctor está impresionado y pudimos reducir mi medicación. Estoy eternamente agradecido.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Elite",
+      "fecha": "Enero 2024",
+      "antes": "HbA1c 9.2%",
+      "despues": "HbA1c 6.1%"
+    },
+    {
+      "nombre": "Laura Martínez",
+      "edad": 28,
+      "objetivo": "Nutrición deportiva",
+      "resultado": "Mejoró rendimiento y composición corporal",
+      "testimonio": "Como corredora de maratones, necesitaba optimizar mi alimentación. La Dra. María me ayudó a crear un plan específico para mis entrenamientos. Mi tiempo en maratón mejoró 15 minutos, aumenté mi masa muscular y reduje mi porcentaje de grasa. Ahora entiendo cómo alimentar mi cuerpo para el alto rendimiento.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Premium",
+      "fecha": "Febrero 2024",
+      "antes": "22% grasa corporal",
+      "despues": "16% grasa corporal"
+    },
+    {
+      "nombre": "Carmen Flores",
+      "edad": 52,
+      "objetivo": "Menopausia y salud hormonal",
+      "resultado": "Controló síntomas y perdió 12kg",
+      "testimonio": "La menopausia había sido una pesadilla: subí de peso, tenía bochornos constantes y me sentía terrible. La Dra. María me explicó cómo la nutrición podía ayudar con los síntomas. En 6 meses, mis bochornos disminuyeron drásticamente, perdí 12kg y recuperé mi energía. Me siento como nueva.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Elite",
+      "fecha": "Diciembre 2023",
+      "antes": "78kg",
+      "despues": "66kg"
+    },
+    {
+      "nombre": "Diego Hernández",
+      "edad": 19,
+      "objetivo": "Ganancia de masa muscular",
+      "resultado": "Ganó 8kg de músculo limpio",
+      "testimonio": "Siempre fui muy delgado y no importaba cuánto comiera o entrenara, no ganaba músculo. La Dra. María me hizo entender que estaba comiendo mal y en los momentos incorrectos. Con su plan específico para ganancia muscular, en 4 meses gané 8kg de músculo puro. Mi transformación física es increíble.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Premium",
+      "fecha": "Abril 2024",
+      "antes": "62kg",
+      "despues": "70kg"
+    },
+    {
+      "nombre": "Sofía y Familia Ramírez",
+      "edad": "Familia de 4",
+      "objetivo": "Nutrición familiar",
+      "resultado": "Toda la familia adoptó hábitos saludables",
+      "testimonio": "Como mamá de dos niños, me preocupaba la alimentación de mi familia. La Dra. María trabajó con todos nosotros. Creó menús que a los niños les encantan pero son nutritivos. Mi esposo bajó 10kg, los niños están más activos y yo por fin tengo energía. Ahora cocinar saludable es fácil y delicioso.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Nutrición Familiar",
+      "fecha": "Mayo 2024",
+      "antes": "Hábitos irregulares",
+      "despues": "Familia saludable"
+    },
+    {
+      "nombre": "Patricia Morales",
+      "edad": 41,
+      "objetivo": "Síndrome de ovario poliquístico",
+      "resultado": "Reguló ciclos y perdió 15kg",
+      "testimonio": "El SOP había afectado mi vida durante años: ciclos irregulares, acné, sobrepeso. La Dra. María diseñó un plan nutricional específico para mi condición hormonal. En 6 meses, mis ciclos se regularon, el acné desapareció casi por completo y perdí 15kg. Por primera vez en años me siento en control de mi cuerpo.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Elite",
+      "fecha": "Noviembre 2023",
+      "antes": "Ciclos irregulares",
+      "despues": "Ciclos regulares"
+    },
+    {
+      "nombre": "Miguel Torres",
+      "edad": 58,
+      "objetivo": "Salud cardiovascular",
+      "resultado": "Redujo colesterol y presión arterial",
+      "testimonio": "Mi cardiólogo me advirtió que necesitaba cambiar mi alimentación urgentemente. Mi colesterol estaba en 280 y mi presión en 150/95. La Dra. María creó un plan delicioso y fácil de seguir. En 4 meses, mi colesterol bajó a 190 y mi presión a 120/80. Evité medicación adicional gracias a ella.",
+      "imagen": "test/placeholder.svg?height=150&width=150",
+      "rating": 5,
+      "paquete": "Paquete Premium",
+      "fecha": "Enero 2024",
+      "antes": "Colesterol 280",
+      "despues": "Colesterol 190"
+    }
+  ],
+
+  "estadisticas": [
+    {
+      "numero": "98%",
+      "texto": "Tasa de Satisfacción",
+      "icon": "Star"
+    },
+    {
+      "numero": "500+",
+      "texto": "Pacientes Transformados",
+      "icon": "Users"
+    },
+    {
+      "numero": "92%",
+      "texto": "Mantienen Resultados",
+      "icon": "Award"
+    },
+    {
+      "numero": "4.9/5",
+      "texto": "Calificación Promedio",
+      "icon": "Heart"
+    }
+  ],
+
+  "videotestimonios": [
+    {
+      "titulo": "Transformación de 6 meses - Ana Patricia",
+      "descripcion": "De 82kg a 64kg - Historia completa",
+      "thumbnail": "test/placeholder.svg?height=200&width=350",
+      "duracion": "3:45"
+    },
+    {
+      "titulo": "Control de Diabetes - Roberto Sánchez",
+      "descripcion": "Cómo la nutrición cambió mi vida",
+      "thumbnail": "test/placeholder.svg?height=200&width=350",
+      "duracion": "2:30"
+    },
+    {
+      "titulo": "Rendimiento Deportivo - Laura Martínez",
+      "descripcion": "De corredora amateur a maratonista",
+      "thumbnail": "test/placeholder.svg?height=200&width=350",
+      "duracion": "4:10"
+    }
   ]
 }

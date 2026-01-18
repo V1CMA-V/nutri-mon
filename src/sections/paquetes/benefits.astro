@@ -1,0 +1,45 @@
+---
+import Calendar from '@/assets/icons/calendar.astro'
+import Gift from '@/assets/icons/gift.astro'
+import MessageCircle from '@/assets/icons/message-circle.astro'
+import TrendingUp from '@/assets/icons/trending-up.astro'
+import { beneficiosadicionales } from '@data'
+
+const iconMap: Record<string, any> = {
+  TrendingUp,
+  Calendar,
+  MessageCircle,
+  Gift,
+}
+---
+
+{/* Beneficios Adicionales */}
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-text mb-12 text-center">
+        Todos los Paquetes Incluyen
+      </h2>
+      <div class="grid md:grid-cols-2 gap-16">
+        {
+          beneficiosadicionales.map((beneficio) => {
+            const Icon = iconMap[beneficio.icon]
+            return (
+              <div class="flex gap-4 items-center group">
+                <div class="bg-primary/10 p-3 rounded-full h-fit group-hover:-translate-y-1 transition-transform duration-300">
+                  {Icon && <Icon size={35} class="text-primary" />}
+                </div>
+                <div>
+                  <h3 class="font-semibold text-text mb-2">
+                    {beneficio.titulo}
+                  </h3>
+                  <p class="text-text-muted">{beneficio.descripcion}</p>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>

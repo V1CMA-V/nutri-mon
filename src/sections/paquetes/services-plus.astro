@@ -1,0 +1,51 @@
+---
+import Award from '@/assets/icons/award.astro'
+import FileText from '@/assets/icons/file-text.astro'
+import Gift from '@/assets/icons/gift.astro'
+import MessageCircle from '@/assets/icons/message-circle.astro'
+import { serviciosextras } from '@data'
+
+const iconMap: Record<string, any> = {
+  MessageCircle,
+  FileText,
+  Award,
+  Gift,
+}
+---
+
+<section class="py-16 bg-background-muted">
+  <div class="container mx-auto px-4">
+    <div class="max-w-7xl w-full mx-auto">
+      <h2 class="text-3xl font-bold text-foreground mb-4 text-center">
+        Servicios Adicionales
+      </h2>
+      <p class="text-center text-muted-foreground mb-12">
+        Complementa tu paquete con estos servicios extra
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        {
+          serviciosextras.map((servicio) => {
+            const Icon = iconMap[servicio.icon]
+            return (
+              // Card
+              <div class="p-6 text-center bg-card rounded-lg shadow-md hover:scale-110 transition-transform duration-300">
+                <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {Icon && <Icon size={35} class="text-primary" />}
+                </div>
+                <h3 class="font-semibold text-foreground mb-2">
+                  {servicio.titulo}
+                </h3>
+                <p class="text-sm text-muted-foreground mb-3">
+                  {servicio.descripcion}
+                </p>
+                <div class="text-2xl font-bold text-primary">
+                  {servicio.precio}
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>

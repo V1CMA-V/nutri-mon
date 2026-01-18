@@ -1,0 +1,48 @@
+---
+import Award from '@/assets/icons/award.astro'
+import Heart from '@/assets/icons/heart.astro'
+import Star from '@/assets/icons/star.astro'
+import Users from '@/assets/icons/users.astro'
+import { estadisticas } from '@data'
+
+const iconMap: Record<string, any> = {
+  Star,
+  Users,
+  Award,
+  Heart,
+}
+---
+
+{/* Hero Section */}
+<section
+  class="pt-24 pb-12 bg-linear-to-br from-primary/50 via-background to-background"
+>
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-text mb-6 text-balance">
+        Historias Reales de Transformación
+      </h1>
+      <p class="text-lg text-text-muted mb-8 text-pretty">
+        Lee cómo mis pacientes han transformado sus vidas a través de una
+        nutrición personalizada y consciente
+      </p>
+    </div>
+
+    {/* Estadísticas */}
+    <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-12">
+      {
+        estadisticas.map((stat) => {
+          const Icon = iconMap[stat.icon]
+          return (
+            // card
+            <div class="p-6 text-center shadow hover:shadow-lg transition-shadow bg-card rounded-lg">
+              {Icon && <Icon size={40} class=" text-primary mx-auto mb-3" />}
+              <div class="text-3xl font-bold text-text mb-2">{stat.numero}</div>
+              <div class="text-sm text-text-muted">{stat.texto}</div>
+            </div>
+          )
+        })
+      }
+    </div>
+  </div>
+</section>
